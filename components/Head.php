@@ -1,8 +1,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Bootstrap-ecommerce by Vosidiy">
-<title>Bootstrap ecommerce UI KIT - Alibaba example html template </title>
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<title>TK Auto Parts Shop</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://bit.ly/3MWuVJo">
+<link rel="stylesheet" href="assets/css/main.css">
+<script src="assets/js/main.js"></script>
 <script src="Template/user/js/jquery-2.0.0.min.js" type="text/javascript"></script>
 <script src="Template/user/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 <link href="Template/user/css/bootstrap-custom.css" rel="stylesheet" type="text/css" />
@@ -16,5 +18,12 @@
 <link href="Template/user/css/responsive.css" rel="stylesheet" media="only screen and (max-width: 1200px)" />
 <script src="Template/user/js/script.js" type="text/javascript"></script>
 <script type="text/javascript">
-    $(document).ready(function() {});
+    $(document).ready(function() {
+        <?php if ($_SESSION['error']) { ?>
+            $('#pop-up-error').modal('show');
+        <?php
+            $_SESSION['error'] = false;
+        }
+        ?>
+    });
 </script>

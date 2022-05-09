@@ -1,4 +1,7 @@
 <?php
+session_start();
+require('http/client.php');
+$_SESSION["error"] = false;
 $pages = isset($_GET["pages"]) ? $_GET["pages"] : '';
 ?>
 <!DOCTYPE HTML>
@@ -10,10 +13,17 @@ $pages = isset($_GET["pages"]) ? $_GET["pages"] : '';
 
 <body>
     <?php
+    include 'components/PopUp.php';
     include 'components/Header.php';
     switch ($pages) {
-        case 'pay':
+        case 'Pay':
             include 'pages/Pay.php';
+            break;
+        case 'Register':
+            include 'pages/Register.php';
+            break;
+        case 'Shop':
+            include 'pages/Shop.php';
             break;
         default:
             include 'pages/Homepage.php';
