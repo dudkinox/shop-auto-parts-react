@@ -1,3 +1,6 @@
+<?php
+$pages = isset($_GET["pages"]) ? $_GET["pages"] : '';
+?>
 <!DOCTYPE HTML>
 <html lang="en">
 
@@ -8,7 +11,14 @@
 <body>
     <?php
     include 'components/Header.php';
-    include 'pages/Homepage.php';
+    switch ($pages) {
+        case 'pay':
+            include 'components/Pay.php';
+            break;
+        default:
+            include 'pages/Homepage.php';
+            break;
+    }
     include 'components/Footer.php';
     ?>
 </body>
