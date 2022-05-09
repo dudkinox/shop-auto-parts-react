@@ -10,7 +10,7 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> Sourcing </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Top Suppliers</a></li>
+                            <li><a class="dropdown-item" href="?pages=pay">Top Suppliers</a></li>
                             <li><a class="dropdown-item" href="#">Suppliers by Regions </a></li>
                             <li><a class="dropdown-item" href="#">Online Retailer </a></li>
                         </ul>

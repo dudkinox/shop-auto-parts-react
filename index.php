@@ -13,7 +13,7 @@ $pages = isset($_GET["pages"]) ? $_GET["pages"] : '';
     include 'components/Header.php';
     switch ($pages) {
         case 'pay':
-            include 'components/Pay.php';
+            include 'pages/Pay.php';
             break;
         default:
             include 'pages/Homepage.php';
