@@ -9,7 +9,7 @@
             <div class="collapse navbar-collapse" id="navbarTop">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item dropdown"><a href="?pages=Shop" class="nav-item nav-link"> Shop </a>
-                      
+
                     </li>
                     <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> Services </a>
                         <ul class="dropdown-menu">
@@ -25,8 +25,8 @@
                             <li><a class="dropdown-item" href="#">For Suppliers </a></li>
                         </ul>
                     </li>
-                
-            </div> 
+
+            </div>
         </div>
     </nav>
 
@@ -37,16 +37,14 @@
                     <div class="category-wrap dropdown py-1">
                         <button type="button" class="btn btn-light  dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Categories</button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#"> View All Product </a>
-                            <a class="dropdown-item" href="#"> Car Shock Absorber </a>
-                            <a class="dropdown-item" href="#">Brake pads</a>
-                            <a class="dropdown-item" href="#">Front and Rear Bumbers and Bumber Frame</a>
-                            <a class="dropdown-item" href="#">Engine Oil</a>
-                            <a class="dropdown-item" href="#">Engine Mount Rubber</a>
-                            <a class="dropdown-item" href="#">Filter</a>
-                            <a class="dropdown-item" href="#">Bearings,Ball Bearings,Ball Bearings</a>
-                            <a class="dropdown-item" href="#">Side Mirror</a>
-                            <a class="dropdown-item" href="#">Tail Linght</a>
+                            <a class="dropdown-item" href="?pages=Shop"> View All Product </a>
+                            <a class="dropdown-item" href="?pages=Suspension"> Car Shock Absorber </a>
+                            <a class="dropdown-item" href="?pages=Brake">Brake pads</a>
+                            <a class="dropdown-item" href="?pages=Bumber_frame">Front and Rear Bumbers and Bumber Frame</a>
+                            <a class="dropdown-item" href="?pages=Filter">Filter</a>
+                            <a class="dropdown-item" href="?pages=Ball_bearings">Bearings,Ball Bearings,Ball Bearings</a>
+                            <a class="dropdown-item" href="?pages=Side_mirror">Side Mirror</a>
+                            <a class="dropdown-item" href="?pages=Headlights"> Head linght</a>
                         </div>
                     </div>
                 </div>
@@ -66,41 +64,58 @@
                                 </button>
                             </div>
                         </div>
-                    </form> 
-                </div> 
+                    </form>
+                </div>
                 <div class="col-lg-9-24 col-sm-12">
                     <div class="widgets-wrap float-right row no-gutters py-1">
                         <div class="col-auto">
-                            <div class="widget-header dropdown">
-                                <a href="#" data-toggle="dropdown" data-offset="20,10">
-                                    <div class="icontext">
-                                        <div class="icon-wrap"><i class="text-warning icon-sm fa fa-user"></i></div>
-                                        <div class="text-wrap text-dark">
-                                            Sign in <br>
-                                            My account <i class="fa fa-caret-down"></i>
+                            <?php if ($EmailUser == "") { ?>
+                                <div class="widget-header dropdown">
+                                    <a href="#" data-toggle="dropdown" data-offset="20,10">
+                                        <div class="icontext">
+                                            <div class="icon-wrap"><i class="text-warning icon-sm fa fa-user"></i></div>
+                                            <div class="text-wrap text-dark">
+                                                Sign in <br>
+                                                My account <i class="fa fa-caret-down"></i>
+                                            </div>
                                         </div>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <form action="services/account.service.php?request=login" method="POST" class="px-4 py-3">
+                                            <div class="form-group">
+                                                <label>Email address</label>
+                                                <input type="email" name="email-login" class="form-control" placeholder="email@example.com">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Password</label>
+                                                <input type="password" name="password-login" class="form-control" placeholder="Password">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Sign in</button>
+                                        </form>
+                                        <hr class="dropdown-divider">
+                                        <a class="dropdown-item" href="?pages=Register">Have account? Sign up</a>
+                                        <a class="dropdown-item" href="#">Forgot password?</a>
                                     </div>
-                                </a>
-                                <div class="dropdown-menu">
-                                    <form action="services/account.service.php?request=login" method="POST" class="px-4 py-3">
-                                        <div class="form-group">
-                                            <label>Email address</label>
-                                            <input type="email" name="email-login" class="form-control" placeholder="email@example.com">
+                                </div>
+                            <?php } else { ?>
+                                <div class="widget-header dropdown">
+                                    <a href="#" data-toggle="dropdown" data-offset="20,10">
+                                        <div class="icontext">
+                                            <div class="icon-wrap"><i class="text-warning icon-sm fa fa-user"></i></div>
+                                            <div class="text-wrap text-dark">
+                                                <?php echo $EmailUser; ?> <i class="fa fa-caret-down"></i>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Password</label>
-                                            <input type="password" name="password-login" class="form-control" placeholder="Password">
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Sign in</button>
-                                    </form>
-                                    <hr class="dropdown-divider">
-                                    <a class="dropdown-item" href="?pages=Register">Have account? Sign up</a>
-                                    <a class="dropdown-item" href="#">Forgot password?</a>
-                                </div> 
-                            </div> 
-                        </div> 
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="?pages=Profile">My account</a>
+                                        <a class="dropdown-item" href="?pages=Logout">Logout</a>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
                         <div class="col-auto">
-                            <a href="#" class="widget-header">
+                            <a href="?pages=Pay" class="widget-header">
                                 <div class="icontext">
                                     <div class="icon-wrap"><i class="text-warning icon-sm fa fa-shopping-cart"></i>
                                     </div>
@@ -109,7 +124,7 @@
                                     </div>
                                 </div>
                             </a>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>

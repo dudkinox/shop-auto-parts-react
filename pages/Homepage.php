@@ -45,13 +45,12 @@
                         </div>
                     </a>
                 </div>
-        <!-- Categories Start -->
         <div class="container-fluid pt-5">
             <div class="row px-xl-5 pb-3">
                 <div class="col-lg-4 col-md-6 pb-1">
                     <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                         <p class="text-right"> Products</p>
-                        <a href="#" class="cat-img position-relative overflow-hidden mb-3">
+                        <a href="?pages=Suspension" class="cat-img position-relative overflow-hidden mb-3">
                             <img class="img-fluid" src="#" alt="">
                         </a>
                         <h5 class="font-weight-semi-bold m-0">SUSPENSION SYSTEMS</h5>
@@ -60,7 +59,7 @@
                 <div class="col-lg-4 col-md-6 pb-1">
                     <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                         <p class="text-right"> Products</p>
-                        <a href="#" class="cat-img position-relative overflow-hidden mb-3">
+                        <a href="?pages=Brake" class="cat-img position-relative overflow-hidden mb-3">
                             <img class="img-fluid" src="#" alt="">
                         </a>
                         <h5 class="font-weight-semi-bold m-0">BRAKE SYSTEMS</h5>
@@ -69,7 +68,7 @@
                 <div class="col-lg-4 col-md-6 pb-1">
                     <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                         <p class="text-right"> Products</p>
-                        <a href="#" class="cat-img position-relative overflow-hidden mb-3">
+                        <a href="?pages=Ari_intakers" class="cat-img position-relative overflow-hidden mb-3">
                             <img class="img-fluid" src="#" alt="">
                         </a>
                         <h5 class="font-weight-semi-bold m-0">AIR INTAKES</h5>
@@ -78,7 +77,7 @@
                 <div class="col-lg-4 col-md-6 pb-1">
                     <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                         <p class="text-right"> Products</p>
-                        <a href="#" class="cat-img position-relative overflow-hidden mb-3">
+                        <a href="?pages=Headlights" class="cat-img position-relative overflow-hidden mb-3">
                             <img class="img-fluid" src="#" alt="">
                         </a>
                         <h5 class="font-weight-semi-bold m-0">HALO HEADLIGHTS</h5>
@@ -87,7 +86,7 @@
                 <div class="col-lg-4 col-md-6 pb-1">
                     <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                         <p class="text-right"> Products</p>
-                        <a href="#" class="cat-img position-relative overflow-hidden mb-3">
+                        <a href="?pages=Turbine" class="cat-img position-relative overflow-hidden mb-3">
                             <img class="img-fluid" src="#" alt="">
                         </a>
                         <h5 class="font-weight-semi-bold m-0">TURBINE SYSTEMS</h5>
@@ -96,7 +95,7 @@
                 <div class="col-lg-4 col-md-6 pb-1">
                     <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                         <p class="text-right"> Products</p>
-                        <a href="#" class="cat-img position-relative overflow-hidden mb-3">
+                        <a href="?pages=Exhaust" class="cat-img position-relative overflow-hidden mb-3">
                             <img class="img-fluid" src="#" alt="">
                         </a>
                         <h5 class="font-weight-semi-bold m-0">EXHAUST SYSTEMS</h5>
@@ -104,7 +103,6 @@
                 </div>
             </div>
         </div>
-        <!-- Categories End -->
 
         <div class="row-sm">
             <div class="col-md-3 col-sm-6">
@@ -212,8 +210,8 @@
                         <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
                     </div>
                     </figcaption>
-                </figure> <!-- card // -->
-            </div> <!-- col // -->
+                </figure> 
+            </div> 
             <div class="col-md-3 col-sm-6">
                 <figure class="card card-product">
                     <div class="img-wrap"> <img src="Template/user/images/items/1.jpg"></div>
@@ -221,14 +219,14 @@
                         <a href="#" class="title">The name of product</a>
                         <div class="price-wrap">
                             <span class="price-new">$280</span>
-                        </div> <!-- price-wrap.// -->
+                        </div> 
                         <div class="card-footer d-flex justify-content-between bg-light border">
                         <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
                         <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
                     </div>
                     </figcaption>
-                </figure> <!-- card // -->
-            </div> <!-- col // -->
+                </figure> 
+            </div> 
             <div class="col-md-3 col-sm-6">
                 <figure class="card card-product">
                     <div class="img-wrap"> <img src="Template/user/images/items/2.jpg"></div>
@@ -237,14 +235,14 @@
                         <div class="price-wrap">
                             <span class="price-new">$1280</span>
                             <del class="price-old">$1980</del>
-                        </div> <!-- price-wrap.// -->
+                        </div> 
                         <div class="card-footer d-flex justify-content-between bg-light border">
                         <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
                         <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
                     </div>
                     </figcaption>
-                </figure> <!-- card // -->
-            </div> <!-- col // -->
+                </figure> 
+            </div>
             <div class="col-md-3 col-sm-6">
                 <figure class="card card-product">
                     <div class="img-wrap"> <img src="Template/user/images/items/3.jpg"></div>
@@ -252,14 +250,14 @@
                         <a href="#" class="title">The name of product</a>
                         <div class="price-wrap">
                             <span class="price-new">$280</span>
-                        </div> <!-- price-wrap.// -->
+                        </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">
                         <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
                         <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
                     </div>
                     </figcaption>
-                </figure> <!-- card // -->
-            </div> <!-- col // -->
+                </figure> 
+            </div> 
             <div class="col-md-3 col-sm-6">
                 <figure class="card card-product">
                     <div class="img-wrap"> <img src="Template/user/images/items/4.jpg"></div>
@@ -267,14 +265,14 @@
                         <a href="#" class="title">The name of product</a>
                         <div class="price-wrap">
                             <span class="price-new">$280</span>
-                        </div> <!-- price-wrap.// -->
+                        </div> 
                         <div class="card-footer d-flex justify-content-between bg-light border">
                         <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
                         <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
                     </div>
                     </figcaption>
-                </figure> <!-- card // -->
-            </div> <!-- col // -->
+                </figure> 
+            </div> 
             <div class="col-md-3 col-sm-6">
                 <figure class="card card-product">
                     <div class="img-wrap"> <img src="Template/user/images/items/6.jpg"></div>
@@ -282,17 +280,17 @@
                         <a href="#" class="title">The name of product</a>
                         <div class="price-wrap">
                             <span class="price-new">$280</span>
-                        </div> <!-- price-wrap.// -->
+                        </div> 
                         <div class="card-footer d-flex justify-content-between bg-light border">
                         <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
                         <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
                     </div>
                     </figcaption>
-                </figure> <!-- card // -->
-            </div> <!-- col // -->
-        </div> <!-- row.// -->
+                </figure> 
+            </div> 
+        </div> 
     <div>
-    <a href="" class="btn btn-light py-2 px-3">See More</a>
+    <a href="#" class="btn btn-light py-2 px-3">See More</a>
     </div>
 
     </div>
