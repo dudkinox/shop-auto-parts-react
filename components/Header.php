@@ -38,13 +38,13 @@
                         <button type="button" class="btn btn-light  dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i> Categories</button>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="?pages=Shop"> View All Product </a>
-                            <a class="dropdown-item" href="?pages=Suspension"> Car Shock Absorber </a>
-                            <a class="dropdown-item" href="?pages=Brake">Brake pads</a>
-                            <a class="dropdown-item" href="?pages=Bumber_frame">Front and Rear Bumbers and Bumber Frame</a>
-                            <a class="dropdown-item" href="?pages=Filter">Filter</a>
-                            <a class="dropdown-item" href="?pages=Ball_bearings">Bearings,Ball Bearings,Ball Bearings</a>
-                            <a class="dropdown-item" href="?pages=Side_mirror">Side Mirror</a>
-                            <a class="dropdown-item" href="?pages=Headlights"> Head linght</a>
+                            <a class="dropdown-item" href="?type=Car Shock Absorber&pages=Shop"> Car Shock Absorber </a>
+                            <a class="dropdown-item" href="?type=Brake pads&pages=Shop">Brake pads</a>
+                            <a class="dropdown-item" href="?type=Front and Rear Bumbers and Bumber Frame&pages=Shop">Front and Rear Bumbers and Bumber Frame</a>
+                            <a class="dropdown-item" href="?type=Filter&pages=Shop">Filter</a>
+                            <a class="dropdown-item" href="?type=Bearings,Ball Bearings,Ball Bearings&pages=Shop">Bearings,Ball Bearings,Ball Bearings</a>
+                            <a class="dropdown-item" href="?type=Side Mirror&pages=Shop">Side Mirror</a>
+                            <a class="dropdown-item" href="?type=Head linght&pages=Shop"> Head linght</a>
                         </div>
                     </div>
                 </div>

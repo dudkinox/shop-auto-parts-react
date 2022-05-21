@@ -1,5 +1,13 @@
+
+<?php 
+session_start();
+if($_SESSION['no'] == ""){
+    header("Location: ../");
+}
+require("../http/client.php"); 
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"></html>
 
 <head>
     <?php include 'components/Head.php'; ?>
@@ -12,25 +20,24 @@
         ?>
         <div class="main-panel">
             <?php
-            include 'pages/homepage.php';
-          
+            $pages = isset($_GET["pages"]) ? $_GET["pages"] : '';
+            switch ($pages) {
+                case 'Add_Product':
+                    include 'pages/Add_Product.php';
+                    break;
+                case 'Product_List':
+                    include 'pages/ProductList.php';
+                    break;
+                default:
+                    include 'pages/homepage.php';
+                    break;
+            }
             ?>
+        <?php 
+        include 'components/Footer.php';
+        ?>
         </div>
     </div>
     <?php include 'components/Script.php' ?>
-</body>
-<body onclick="InputValidation()">
-    <?php
-    switch ($pages) {
-        case 'Add_Product':
-            include 'pages/Add_product.php';
-            break;      
-        default:
-            include 'pages/Homepage.php';
-            break;
-    }
-   
-    ?>
-</body>
 
 </html>

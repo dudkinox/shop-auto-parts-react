@@ -14,3 +14,5 @@
 <link href="../Template/admin/assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
 <!-- CSS Just for demo purpose, don't include it in your project -->
 <link href="../Template/admin/assets/demo/demo.css" rel="stylesheet" />
+<!-- data table -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css">

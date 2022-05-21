@@ -1,1 +1,0 @@
-<div style="text-align:center;"><h1>SIDE MIRROR</h1></div>

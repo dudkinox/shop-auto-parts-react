@@ -1,1 +1,0 @@
-<div style="text-align:center;"><h1>FILTER</h1></div>

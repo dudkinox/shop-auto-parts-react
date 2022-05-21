@@ -1,1 +1,0 @@
-<div style="text-align:center;"><h1 class="center">BALL BEARINGS</h1></div>

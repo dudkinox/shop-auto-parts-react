@@ -24,15 +24,21 @@
                 </a>
             </li> -->
             <li>
-                <a href="#">
+                <a href="?pages=Product_List">
                     <i class="nc-icon nc-tile-56"></i>
                     <p>Table List</p>
                 </a>
             </li>
             <li>
-                <a href="#">
-                <i class="fas fa-arrow-left" style="font-size:48px;"></i>
+                <a href="?pages=Add_Product">
+                <i class="nc-icon nc-cart-simple"></i>
                     <p>Add Products</p>
+                </a>
+            </li>
+            <li>
+                <a href="../?pages=Logout">
+                <i class="nc-icon nc-button-power"></i>
+                    <p>Logout</p>
                 </a>
             </li>
         </ul>
