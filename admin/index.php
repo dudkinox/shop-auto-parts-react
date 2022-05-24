@@ -28,6 +28,9 @@ require("../http/client.php");
                 case 'Product_List':
                     include 'pages/ProductList.php';
                     break;
+                    case 'Edit_Product':
+                        include 'pages/Edit_Product.php';
+                        break;
                 default:
                     include 'pages/homepage.php';
                     break;

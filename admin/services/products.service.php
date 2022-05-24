@@ -1,7 +1,7 @@
 <?php
 require("../../http/client.php");
 $request = isset($_GET["request"]) ? $_GET["request"] : "";
-
+$code = isset($_GET["code"]) ? $_GET["code"] : "";
 switch ($request) {
     case "Add_Product":
         $fileImage = $_FILES["Imges"]["name"];
@@ -43,6 +43,48 @@ switch ($request) {
             } else {
                 echo "Error: " . $query . "<br>" . $conn->error;
             }
+        }
+        break;
+    case "Edit_Product":
+        $type = $_POST["typeProduct"];
+        $nameProduct = $_POST["NameProduct"];
+        $dataProduct = $_POST["DataProduct"];
+        $price = $_POST["Price"];
+        $quantity = $_POST["Quantity"];
+
+        $queryUpdate = "";
+
+        if ($_FILES["Images"]["name"] != "") {
+            $fileImage = $_FILES["Images"]["name"];
+            $fileImageTmp = $_FILES["Images"]["tmp_name"];
+            $fileImageSize = $_FILES["Images"]["size"];
+            $fileImageType = $_FILES["Images"]["type"];
+            $fileImagePath = "../../assets/img/";
+            if ($fileImageSize > 0) {
+                $fileImageName = uniqid() . "." . pathinfo($fileImage, PATHINFO_EXTENSION);
+                move_uploaded_file($fileImageTmp, $fileImagePath . $fileImageName);
+                $queryUpdate = "UPDATE `product` 
+                                SET `Type`='$type',
+                                    `NameProduct`='$nameProduct',
+                                    Imges='assets/img/" . $fileImageName . "',
+                                    `DataProduct`='$dataProduct',
+                                    `Price`='$price',
+                                    `Quantity`='$quantity'
+                                WHERE Code = '$code'";
+            }
+        } else {
+            $queryUpdate = "UPDATE `product` 
+                            SET `Type`='$type',
+                                `NameProduct`='$nameProduct',
+                                `DataProduct`='$dataProduct',
+                                `Price`='$price',
+                                `Quantity`='$quantity'
+                            WHERE Code = '$code'";
+        }
+        if ($conn->query($queryUpdate) === TRUE) {
+            header("Location: ../?pages=Product_List");
+        } else {
+            echo "Error: " . $queryUpdate . "<br>" . $conn->error;
         }
         break;
     case "delete":

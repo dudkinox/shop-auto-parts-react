@@ -55,7 +55,7 @@
                                         <td>
                                             <div class="row">
                                                 <div class="col-6">
-                                                    <a href="#">
+                                                    <a href="?pages=Edit_Product&code=<?php echo $rowProductList["Code"]; ?>">
                                                         <img src="https://img.icons8.com/office/30/000000/edit.png" />
                                                     </a>
                                                 </div>

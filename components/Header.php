@@ -1,7 +1,7 @@
 <header class="section-header">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="?pages=Homepage"><img class="logo" src="Template/user/images/logos/logo-alibaba.png" alt="TK Auto Parts Shop" title=""></a>
+            <a class="navbar-brand" href="?pages=Homepage"><img width='auto' height='auto' class="logo" src="Template/user/images/logos/Logo.png " alt="TK Auto Parts Shop" title=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -114,10 +114,11 @@
                                 </div>
                             <?php } ?>
                         </div>
+                        <?php if(isset($_SESSION["no"])){ ?>
                         <div class="col-auto">
                             <a href="?pages=Pay" class="widget-header">
                                 <div class="icontext">
-                                    <div class="icon-wrap"><i class="text-warning icon-sm fa fa-shopping-cart"></i>
+                                    <div class="icon-wrap"><i class="text-warning icon-sm fa fa-shopping-cart"></i><p class="h5" id="item-cart"></p>
                                     </div>
                                     <div class="text-wrap text-dark">
                                         Order <br> Protection
@@ -125,6 +126,18 @@
                                 </div>
                             </a>
                         </div>
+                        <?php } ?>
+                        <?php if(isset($_SESSION["no"])){ ?>
+                        <div class="col-auto">
+                            <a href="#" class="widget-header">
+                                <div class="icontext">
+                                    <div class="icon-wrap"><i class="text-warning icon-sm fab fa-wpforms"></i><p class="h5" id="item-cart"></p>
+                                    </div>
+                                    
+                                </div>
+                            </a>
+                        </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

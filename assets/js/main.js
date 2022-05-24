@@ -51,4 +51,28 @@ function InputValidation() {
         }
     }
 }  
-       
+
+const itemCart = window.sessionStorage.itemCart ? JSON.parse(window.sessionStorage.itemCart) : [];
+
+function uploadImageSlip(){
+    document.getElementById("upload-slip").click();
+}
+
+function previewSlip(){
+    var file = document.getElementById("upload-slip").files[0];
+    var reader = new FileReader();
+    reader.onloadend = function() {
+        document.getElementById("slip-image-upload").src = reader.result;
+    }
+    if (file) {
+        reader.readAsDataURL(file);
+    } else {
+        document.getElementById("slip-image-upload").src = "";
+    }
+}
+
+function removeOrder(index){
+    itemCart.splice(index, 1);
+    window.sessionStorage.itemCart = JSON.stringify(itemCart);
+    window.location.reload();
+}

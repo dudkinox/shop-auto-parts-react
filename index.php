@@ -13,8 +13,10 @@ $pages = isset($_GET["pages"]) ? $_GET["pages"] : '';
     <?php include 'components/Head.php'; ?>
 </head>
 
-<body onclick="InputValidation()">
+<body onclick="<?php echo $pages != 'Register' ? 'getUpdatePageCart();' : 'InputValidation();'; ?>">
     <?php
+     $act = (isset($_GET['act']) ? $_GET['act'] : '');
+     $ID = (isset($_GET['id']) ? $_GET['ID'] : '');
     include 'components/PopUp.php';
     include 'components/Header.php';
     switch ($pages) {
