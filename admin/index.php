@@ -25,6 +25,9 @@ require("../http/client.php");
                 case 'Add_Product':
                     include 'pages/Add_Product.php';
                     break;
+                case 'Order':
+                    include 'pages/Order.php';
+                    break;
                 case 'Product_List':
                     include 'pages/ProductList.php';
                     break;

@@ -12,7 +12,7 @@
     <div class="sidebar-wrapper">
         <ul class="nav">       
             <li>
-                <a href="#">
+                <a href="?pages=Order">
                     <i class="nc-icon nc-bell-55"></i>
                     <p>Order</p>
                 </a>

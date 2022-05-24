@@ -8,7 +8,7 @@
                     <span class="navbar-toggler-bar bar3"></span>
                 </button>
             </div>
-            <a class="navbar-brand" href="javascript:;">ADDMIN Dashboard</a>
+            <a class="navbar-brand" href="?pages=Order">ADDMIN Dashboard</a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -28,7 +28,7 @@
             </form>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link btn-magnify" href="javascript:;">
+                    <a class="nav-link btn-magnify" href="?pages=Order">
                         <i class="nc-icon nc-layout-11"></i>
                         <p>
                             <span class="d-lg-none d-md-block">Stats</span>
