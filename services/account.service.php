@@ -28,14 +28,16 @@ switch ($request) {
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             if ($row["Type"] == "admin") {
-                $_SESSION["admin"] = true;
-                $_SESSION["no"] = $row["No"];
+                echo $_SESSION["admin"] = true;
+                echo $_SESSION["no"] = $row["No"];
                 header("Location: ../admin");
+                break;
             } else {
                 $_SESSION["user"] = true;
                 $_SESSION["no"] = $row["No"];
                 $_SESSION["email"] = $row["Email"];
                 header("Location: ../");
+                break;
             }
         } else {
             $_SESSION["pop-up"] = "Email or Password is incorrect";

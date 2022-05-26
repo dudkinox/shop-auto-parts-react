@@ -3,11 +3,11 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="text-center"> รายการสั่งซื้อ </h4>
+                    <h4 class="text-center"> รายการสั่งซื้อ </h4> 
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table text-center" id="Order">
+                        <table class="table text-center" id="product-list">
                             <thead class="text-primary">
                                 <th class="text-center">
                                     NO.
@@ -43,11 +43,28 @@
                             </thead>
                             <tbody>
                                 <?php
-                                $queryProductList = "SELECT * FROM product";
-                                $queryProductList = "SELECT * FROM oders";
-                                $resultProductList = $conn->query($queryProductList);
-                                while ($rowProductList = $resultProductList->fetch_assoc()) {
+                                $queryOrderList = "SELECT `Number`, Oder, `Name`, Email, `Address`, Phone, ImgSlip, `Sum`, `DateTime`, `Status`
+                                                   FROM oders as o 
+                                                   INNER JOIN account as a 
+                                                   ON o.id_user = a.No";
+                                $resultOrderList = $conn->query($queryOrderList);
+                                while ($rowOrderList = $resultOrderList->fetch_assoc()) {
                                 ?>
+                                <tr class="text-center">
+                                        <td><?php echo $rowOrderList["Number"]; ?></td>
+                                        <td><?php echo $rowOrderList["Oder"]; ?></td>
+                                        <td><?php echo $rowOrderList["Name"]; ?></td>
+                                        <td><?php echo $rowOrderList["Email"]; ?></td>
+                                        <td><?php echo $rowOrderList["Address"]; ?></td>
+                                        <td><?php echo $rowOrderList["Phone"]; ?></td>
+                                        <td> <img src="../<?php echo $rowOrderList["ImgSlip"]; ?>" width="100" height="100" alt="Slip"> </td>                           
+                                        <td class="text-right"><?php echo number_format($rowOrderList["Sum"]); ?> บาท</td>
+                                        <td><?php echo $rowOrderList["DateTime"]; ?></td>
+                                        <td><?php echo $rowOrderList["Status"]; ?></td>
+                                        <td>
+                                           
+                                        </td>
+                                    </tr>
                                    
                                 <?php } ?>
                             </tbody>

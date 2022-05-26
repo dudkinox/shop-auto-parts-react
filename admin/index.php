@@ -2,7 +2,8 @@
 <?php 
 session_start();
 if($_SESSION['no'] == ""){
-    header("Location: ../");
+    // echo '<script>window.location.href="../"</script>';
+    header('location: ../');
 }
 require("../http/client.php"); 
 ?>
@@ -25,8 +26,8 @@ require("../http/client.php");
                 case 'Add_Product':
                     include 'pages/Add_Product.php';
                     break;
-                case 'Order':
-                    include 'pages/Order.php';
+                case 'OrderList':
+                    include 'pages/OrderList.php';
                     break;
                 case 'Product_List':
                     include 'pages/ProductList.php';
@@ -35,7 +36,7 @@ require("../http/client.php");
                         include 'pages/Edit_Product.php';
                         break;
                 default:
-                    include 'pages/homepage.php';
+                    include 'pages/ProductList.php';
                     break;
             }
             ?>
