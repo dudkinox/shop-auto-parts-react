@@ -48,10 +48,11 @@
                                                    INNER JOIN account as a 
                                                    ON o.id_user = a.No";
                                 $resultOrderList = $conn->query($queryOrderList);
+                                $i=1;
                                 while ($rowOrderList = $resultOrderList->fetch_assoc()) {
                                 ?>
                                 <tr class="text-center">
-                                        <td><?php echo $rowOrderList["Number"]; ?></td>
+                                        <td><?php echo  $i;?></td>
                                         <td><?php echo $rowOrderList["Oder"]; ?></td>
                                         <td><?php echo $rowOrderList["Name"]; ?></td>
                                         <td><?php echo $rowOrderList["Email"]; ?></td>
@@ -66,7 +67,7 @@
                                         </td>
                                     </tr>
                                    
-                                <?php } ?>
+                                <?php $i++;} ?>
                             </tbody>
                         </table>
                     </div>

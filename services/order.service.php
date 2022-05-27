@@ -31,8 +31,8 @@ switch ($request) {
                     $imageSlip_destination = "../assets/Img/" . $imageSlip_new;
                     if (move_uploaded_file($imageSlip_tmp, $imageSlip_destination)) {
                         for ($i=0; $i < $count; $i++) { 
-                            $sql = "INSERT INTO `oders`(`Name`, `Oder`, `ImgSlip`, `Status`, `Sum`, `Price`) 
-                                    VALUES ('" . $name . ' ' . $lname . "', '".$_POST["orderName".$i]."', 'assets/Img/".$imageSlip_new."', 'รอการอนุมัติ', '$total', '".$_POST["orderPrice".$i]."')";
+                            $sql = "INSERT INTO `oders`(`id_user`,`Name`, `Oder`, `ImgSlip`, `Status`, `Sum`, `Price`) 
+                                    VALUES ('".$_SESSION["no"]."','" . $name . ' ' . $lname . "', '".$_POST["orderName".$i]."', 'assets/Img/".$imageSlip_new."', 'รอการอนุมัติ', '$total', '".$_POST["orderPrice".$i]."')";
                             if ($conn->query($sql) === TRUE) {
                                 echo '
                                 <script>
